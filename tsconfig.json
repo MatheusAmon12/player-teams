@@ -12,5 +12,5 @@
       "@theme/*": ["./src/theme/*"],
       "@storage/*": ["./src/storage/*"],
     }
-  }
+  },
 }
