@@ -23,6 +23,10 @@ export function Groups() {
     }
   }
 
+  const handleGroupTouch = (group: string) => {
+    navigation.navigate('players', { group });
+  }
+ 
   const handleNewGroup = () => {
     navigation.navigate('new');
   }
@@ -39,7 +43,7 @@ export function Groups() {
           data={groups}
           keyExtractor={item => item}
           renderItem={({item}) => (
-            <GroupCard title={item} />
+            <GroupCard title={item} onPress={() => handleGroupTouch(item)} />
           )}
           ListEmptyComponent={() => (
             <ListEmpty message='Que tal cadastrar a primeira turma?' />
